@@ -88,7 +88,24 @@ convenient for reading and copying but not ideal for storing in a file when redi
 character, use the `-trim` parameter.
 
 ```console
-bpasswd -p 'my$upErP4SsWord' -trim > password.txt
+bpasswd -p 'my$upErP4SsWord' --trim > password.txt
+```
+
+### Hash verification
+
+To compare the password with the hash, use the `--verify` flag. If successful, the command will return an exit code of
+0. If the verification fails, it will return 1.
+
+Run:
+
+```console
+bpasswd -p 'my$upErP4SsWord' --verify '$2a$16$fEZET4xQbBVPYLmcmuorSuLGbTHJnvv3bTiMzJF.g4MKM/3apeUye'
+```
+
+Output:
+
+```console
+Password verification succeeded
 ```
 
 ## Download the Latest Release
@@ -105,13 +122,5 @@ curl -sL https://github.com/antikirra/bpasswd/releases/download/v1.5.0/bpasswd_1
 ```
 
 This will download the 32-bit (386) Linux archive.
-
-### Change Permissions
-
-To make the file executable, you need to set the appropriate permissions. You can do this with the following command:
-
-```console
-chmod +x /usr/bin/bpasswd
-```
 
 Now, you can run `bpasswd` as a regular program anywhere in the system.
