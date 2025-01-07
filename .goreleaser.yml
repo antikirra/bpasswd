@@ -1,0 +1,33 @@
+# Make sure to check the documentation at http://goreleaser.com
+before:
+  hooks:
+    - go mod download
+builds:
+  - id: bpasswd
+    main: ./main.go
+    flags:
+      - -trimpath
+    ldflags:
+      - -w -s
+    goarch:
+      - "386"
+    goos:
+      - linux
+    binary: "bpasswd_{{ .Version }}_{{ .Os }}_{{ .Arch }}"
+archives:
+  - format: binary
+    name_template: "{{ .Binary }}"
+changelog:
+  sort: asc
+  filters:
+    exclude:
+      - "^docs:"
+      - "^test:"
+upx:
+  - enabled: true
+    compress: best
+    lzma: true
+    brute: true
+
+release:
+  prerelease: auto
