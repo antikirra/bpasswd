@@ -14,7 +14,10 @@ import (
 
 const DefaultCost = 12
 
-var re = regexp.MustCompile(`^[a-zA-Z0-9$]+$`)
+var (
+	re      = regexp.MustCompile(`^[a-zA-Z0-9$]+$`)
+	version string
+)
 
 func main() {
 	p := flag.String("p", "", "Raw password to be hashed with bcrypt (insecure)")
@@ -89,7 +92,7 @@ func readPassword() string {
 }
 
 func printUsageAndExit() {
-	fmt.Println("Usage: bpasswd [OPTIONS]")
+	fmt.Println("bpasswd v" + version)
 	fmt.Println("\nOptions:")
 	flag.PrintDefaults()
 	os.Exit(1)

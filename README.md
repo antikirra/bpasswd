@@ -118,7 +118,7 @@ Choose the appropriate version and download the archive with the binary file for
 To download via the command line, use the following command:
 
 ```console
-curl -sL https://github.com/antikirra/bpasswd/releases/download/v1.5.0/bpasswd_1.5.0_linux_386 -o /usr/bin/bpasswd
+curl -sL https://github.com/antikirra/bpasswd/releases/download/v1.5.1/bpasswd_1.5.1_linux_386 -o /usr/bin/bpasswd
 ```
 
 This will download the 32-bit (386) Linux archive.

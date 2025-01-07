@@ -10,7 +10,7 @@ builds:
     flags:
       - -trimpath
     ldflags:
-      - -w -s
+      - -w -s -X main.version={{.Version}}
     goarch:
       - "386"
     goos:
