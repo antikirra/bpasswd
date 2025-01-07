@@ -25,12 +25,12 @@ $2a$12$5gJXBu3/G6lBX3WRurmzi.BLAF16oI5Ip/NWLLolRgc7Uyjfm67ya
 ### Pretty result
 
 Sometimes, the presence of extraneous characters like dots and slashes can cause issues when transmitting and storing
-the password hash. To prevent their appearance in the output value, use the `--pretty` flag.
+the password hash. To prevent their appearance in the output value, use the `-pretty` flag.
 
 Run:
 
 ```console
-bpasswd -p 'my$upErP4SsWord' --pretty
+bpasswd -p 'my$upErP4SsWord' -pretty
 ```
 
 Output:
@@ -88,18 +88,18 @@ convenient for reading and copying but not ideal for storing in a file when redi
 character, use the `-trim` parameter.
 
 ```console
-bpasswd -p 'my$upErP4SsWord' --trim > password.txt
+bpasswd -p 'my$upErP4SsWord' -trim > password.txt
 ```
 
 ### Hash verification
 
-To compare the password with the hash, use the `--verify` flag. If successful, the command will return an exit code of
+To compare the password with the hash, use the `-verify` flag. If successful, the command will return an exit code of
 0. If the verification fails, it will return 1.
 
 Run:
 
 ```console
-bpasswd -p 'my$upErP4SsWord' --verify '$2a$16$fEZET4xQbBVPYLmcmuorSuLGbTHJnvv3bTiMzJF.g4MKM/3apeUye'
+bpasswd -p 'my$upErP4SsWord' -verify '$2a$16$fEZET4xQbBVPYLmcmuorSuLGbTHJnvv3bTiMzJF.g4MKM/3apeUye'
 ```
 
 Output:
