@@ -101,7 +101,7 @@ Choose the appropriate version and download the archive with the binary file for
 To download via the command line, use the following command:
 
 ```console
-wget https://github.com/antikirra/bpasswd/releases/download/v1.2.1/bpasswd_1.2.1_linux_386.tar.gz
+wget https://github.com/antikirra/bpasswd/releases/download/v1.2.2/bpasswd_1.2.2_linux_386.tar.gz
 ```
 
 This will download the 32-bit (386) Linux archive.
@@ -112,7 +112,7 @@ Once the archive is downloaded, extract its contents using the tar command. This
 required files:
 
 ```console
-tar -xzvf bpasswd_1.2.1_linux_386.tar.gz
+tar -xzvf bpasswd_1.2.2_linux_386.tar.gz
 ```
 
 This command will unpack the archive into the current directory.
