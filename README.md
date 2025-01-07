@@ -101,31 +101,10 @@ Choose the appropriate version and download the archive with the binary file for
 To download via the command line, use the following command:
 
 ```console
-wget https://github.com/antikirra/bpasswd/releases/download/v1.2.2/bpasswd_1.2.2_linux_386.tar.gz
+curl -sL https://github.com/antikirra/bpasswd/releases/download/v1.5.0/bpasswd_1.5.0_linux_386 -o /usr/bin/bpasswd
 ```
 
 This will download the 32-bit (386) Linux archive.
-
-### Extract the Executable File
-
-Once the archive is downloaded, extract its contents using the tar command. This will create a directory with the
-required files:
-
-```console
-tar -xzvf bpasswd_1.2.2_linux_386.tar.gz
-```
-
-This command will unpack the archive into the current directory.
-
-### Copy the Executable to the System Directory
-
-To make the tool available globally, move the binary file to a directory in your PATH, such as /usr/bin/:
-
-```console
-mv bpasswd /usr/bin/bpasswd
-```
-
-Now, the utility is available for use from anywhere in your system by simply running the `bpasswd` command.
 
 ### Change Permissions
 

@@ -1,10 +1,12 @@
-# Make sure to check the documentation at http://goreleaser.com
+version: 2
 before:
   hooks:
     - go mod download
 builds:
   - id: bpasswd
     main: ./main.go
+    env:
+      - CGO_ENABLED=0
     flags:
       - -trimpath
     ldflags:
@@ -23,11 +25,12 @@ changelog:
     exclude:
       - "^docs:"
       - "^test:"
+checksum:
+  disable: true
 upx:
   - enabled: true
     compress: best
     lzma: true
     brute: true
-
 release:
   prerelease: auto
